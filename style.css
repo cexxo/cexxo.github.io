@@ -292,4 +292,5 @@
     .projects2{
         display: block;
     }
+    .projects2 img:hover{scale:0.9;}
 }
