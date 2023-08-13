@@ -1,0 +1,295 @@
+.banner {
+    width: 100%;
+    height: 400px;
+    background-color: gray;
+    border: 1px solid black;
+    background-image: url('padova1.png');
+    background-size: 100% 100%;
+    overflow:auto;
+}
+
+.banner #toolbar{
+    right: 0;
+    position: absolute;
+    float: right;
+    padding: 30px 30px 30px;
+    display:none;
+}
+
+
+.banner #facadePicture{
+    width: 160px;
+    height: 160px;
+    border-radius: 80px;
+    margin-left: 45%;
+    margin-right:50%;
+    background-color: white;
+    opacity: 1;
+}
+.banner #book{
+    float:right;
+    width: 10px;
+    height: 10px;
+    padding-top: 5px;
+}
+.banner #propic{
+    width: 150px;
+    height: 150px;
+    border-radius: 75px;
+    opacity: 1;
+    margin-top: 5px;
+    margin-right: 5px;
+    margin-left: -5px;
+}
+
+.banner #name{
+    position: relative;
+    text-align: center;
+    font-size: 40px;
+    color:white;
+    padding-left: 40px;
+}
+
+.banner a{
+    font-size: 16px;
+    padding: 0px 10px 0px;
+    font-family: Arial, Helvetica, sans-serif;
+    text-decoration: none;
+    color: rgb(240, 240, 240);
+}
+.banner a:hover{text-decoration: underline;color:orange;}
+.Resume #uni {
+    width: 100px;
+    height:50px;
+    padding: 10px 20px 20px;
+    float: left;
+    position:relative;
+}
+.Resume #work{
+    width:100px;
+    height:50px;
+    padding: 10px 20px 20px;
+    float:left;
+    position: relative;
+}
+.Resume #pic{
+    width: 280px;
+    height: 280px;
+    border-radius: 140px;
+    margin-left: 5%;
+    margin-right:50%;
+    background-color: white;
+    opacity: 1;
+    margin-top: 70px;
+    display: none;
+}
+.Resume{
+    background-color: whitesmoke;
+    width: 100%;
+}
+.Resume #profile{
+    width: 260px;
+    height: 260px; 
+    border-radius: 130px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    margin-left: 10px;
+    margin-right: 10px;
+    opacity: 1;
+}
+.Resume #social{
+    display: none;
+}
+
+.Resume #layout{
+    width: 100%;
+    height: auto;
+    text-align: center;
+    font-family: 'Montserrat', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+}
+.Resume p{
+    padding:0px 40px 0px;
+}
+.Resume h1{
+    padding:0px 40px 0px;
+}
+.Resume h3{
+    padding:0px 40px 0px;
+}
+.Resume h4{
+    padding:0px 40px 0px;
+}
+.Resume li{
+    padding:0px 40px 0px;
+}
+.Resume lu{
+    padding:0px 40px 0px;
+}
+.Resume #guiResume{
+    display: none;
+}
+
+.mySkils{
+    display: none;
+    background-color: #2988BC;
+    width: 100%;
+}
+.mySkils2{
+    background-color: #2988BC;
+    width: 100%;
+}
+.mySkils h2{
+    color:white;
+    font-size: 70px;
+    text-align: center;
+}
+.mySkils2 #skilimg{
+    width: 90px;
+    height: 90px;
+    border-radius:45px;
+    margin-top: 10px;
+    margin-bottom: 5px;
+    margin-left: 7px;
+    margin-right: 5px;
+}
+.mySkils2 #medallion{
+    background-color: white;
+    width: 100px;
+    height: 100px;
+    border-radius: 50px;
+    margin-left: 45%;
+}
+
+.mySkils2 h3{
+    color:white;
+    font-size: 30px;
+    text-align: center;
+}
+.mySkils2 p{
+    color:white;
+    font-size: 20px;
+    text-align: center;
+    opacity:0.8;
+}
+.mySkils p{
+    color:white;
+    font-size: 20px;
+    text-align: center;
+    opacity:0.8;
+}
+.mySkils #paragraph{
+    color:white;
+    font-size: 20px;
+    opacity:0.8;
+}
+
+.mySkils2 h2{
+    color:white;
+    font-size: 40px;
+    text-align: center;
+}
+.mySkils a{
+    text-decoration: none;
+    color: orange;
+}
+.mySkils2 a{
+    text-decoration: none;
+    color: orange;
+}
+
+.projects{
+    background-color: rgb(226, 211, 211);
+    width: 100%;
+}
+.projects2{
+    display: none;
+    background-color: rgb(226, 211, 211);
+    width: 100%;
+}
+.projects #img{
+    width:40%;
+    height: 40%;
+    border-radius: 10%;
+    margin-left: 30%;
+}
+.contacts{
+    width:100%;
+    height: 200px;
+    background-image: url('map.jpg');
+    background-size: 100% 300px;
+    text-align: center;
+}
+.contacts a{
+    text-decoration: none;
+    color:orange;
+}
+
+@media only screen and (min-width: 1000px)
+{
+    html, body {
+        height: 100%;
+        margin: 0;
+    }
+    .banner {
+        background-image: url("padova1.png");
+        height:600px;
+        width:100%;
+        overflow: auto;
+        
+    }
+    .banner #toolbar{
+        display: block;
+    }
+    .Resume #pic{
+        width: 280px;
+        height: 280px;
+        border-radius: 140px;
+        margin-left: 5%;
+        margin-right:50%;
+        background-color: white;
+        opacity: 1;
+        margin-top: 70px;
+        display: block;
+    }
+    
+    .Resume #guiResume{
+        display: block;
+    }
+
+    .Resume #social{
+        display:block;
+        width: 50px;
+        height: 50px; 
+        border-radius: 25px;
+        position: absolute;
+        float: left;
+    }
+
+    .Resume p{
+        padding:0px 20px 0px;
+    }
+    .Resume h1{
+        padding:0px 20px 0px;
+    }
+    .Resume h3{
+        padding:0px 20px 0px;
+    }
+    .Resume h4{
+        padding:0px 20px 0px;
+    }
+    .Resume li{
+        padding:0px 20px 0px;
+    }
+    .mySkils{
+        display: block;
+    }
+    .mySkils2{
+        display: none;
+    }
+    .projects{
+        display: none;
+    }
+    .projects2{
+        display: block;
+    }
+}
