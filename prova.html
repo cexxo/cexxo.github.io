@@ -1,0 +1,376 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Your Portfolio</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #333;
+        }
+
+        .container {
+            /*max-width: 1200px;*/
+            margin: 0 auto;
+            padding: 5px;
+        }
+
+        .project {
+            margin: 20px 0;
+            padding: 20px;
+            background-color: #DB504A;
+            box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.1);
+            border-radius: 5px;
+        }
+        .contacts {
+            margin: 20px 0;
+            padding: 20px;
+            background-color: #DB504A;
+            box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.1);
+            border-radius: 5px;
+        }
+        .resume {
+            margin: 20px 0;
+            padding: 20px;
+            background-color: #084C61;
+            box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.1);
+            border-radius: 5px;
+        }
+        .resume p{
+            text-align: center;
+            color: white;
+            font-size: 20px;
+            text-shadow: 4px 4px #333;
+            opacity: 0.8;
+        }
+        .resume h3{
+            text-align: center;
+            color: white;
+            font-size: 28px;
+            text-shadow: 4px 4px #333;
+            opacity: 0.9;
+        }
+        .resume h4{
+            text-align: center;
+            color: white;
+            font-size: 24px;
+            text-shadow: 4px 4px #333;
+            opacity: 0.9;
+        }
+        .resume h1{
+            text-align: center;
+            color: white;
+            font-size: 40px;
+            text-shadow: 4px 4px #333;
+        }
+        .skills {
+            margin: 5px 0;
+            padding: 20px;
+            background-color: #56A3A6;
+            box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.1);
+            border-radius: 5px;
+        }
+
+        .project img {
+            max-width: 33%;
+            width: 33%;
+            height: auto;
+            border-radius: 15px;
+            box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.4);
+            float:auto;
+            position: relative;
+        }
+        
+
+        .skills img {
+            max-width: 10%;
+            width: 10%;
+            height: auto;
+            margin-left: 45%;
+            border-radius: 50%;
+            box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.2);
+        }
+        .skills p{
+            flex-direction: row;
+            color:white;
+            font-size: 30px;
+            opacity:0.8;
+            text-align: center;
+        }
+        
+        .skills h2{
+            color:white;
+            font-size: 70px;
+            text-align: center;
+            text-shadow: 4px 4px #333;
+        }
+        .project2 h2{
+            color:white;
+            font-size: 24px;
+            text-shadow: 2px 2px #333;
+        }
+        .project p{
+            float: auto;
+            position: relative;
+            color:white;
+            font-size: 20px;
+            text-shadow: 2px 2px #333;
+        }
+
+        /* Project styles */
+        .project2 {
+            display: flex;
+            border: 1px solid #ccc;
+            padding: 10px;
+            margin-bottom: 20px;
+            margin: 20px 0;
+            background-color: #DB504A;
+            box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.1);
+            border-radius: 5px;
+        }
+
+        .project-details {
+            flex: 1;
+            padding: 10px;
+        }
+
+        .project-image {
+            flex: 1;
+            padding: 10px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .project-image img {
+            max-width: 100%;
+            max-height: 250px; /* Adjust the height as needed */
+            border-radius: 15px;
+            box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.4);
+        }
+
+        .project-image img:hover{scale:0.9;}
+
+        .header {
+            background-color: #333;
+            color: #fff;
+            text-align: center;
+            position: fixed;
+            top: 0;
+            z-index: 1000;
+            display: flex;
+            justify-content:space-evenly;
+            align-items: center;
+            height: 60px;
+            width: 100%;
+            opacity: 0.7;
+        }
+
+        .navbar p{
+            color:white;
+            text-shadow: 2px 2px #333;
+            font-size: 20px;
+        }
+        .navbar a{
+            text-decoration: none;
+        }
+        .navbar p:hover{color:orange;}
+        .contacts a{
+            text-decoration: none;
+            color:orange;
+        }
+        @media screen and (max-width: 768px) {
+            .project {
+                padding: 10px;
+            }
+            .project img{
+                margin-left: 34%;
+            }
+            .project p{
+                text-align: center;
+                float: none;
+                margin-right: 0%;
+            }
+            .project h2{
+                text-align: center;
+            }
+            .skills {
+                padding: 10px;
+            }
+            .skills img {
+                max-width: 30%;
+                width: 30%;
+                height: auto;
+                margin-left: 35%;
+                border-radius: 50%;
+            }
+            header{
+                display: none;
+            }
+            #dummy{
+                display: none;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="header">
+            <div class="navbar">
+                <a href="#Resume"><p>ABOUT</p></a>
+            </div>
+            <div class="navbar">
+                <a href="#MySkills"><p>SKILLS</p></a>
+            </div>
+            <div class="navbar">
+                <a href="#portfolio"><p>PROJECTS</p></a>
+            </div>
+            <div class="navbar">
+                <a href="#contacts"><p>CONTACTS</p></a>
+            </div>
+        </div>
+    </header>
+    <div style="width:100%;height:35px;" id="dummy">
+    </div>
+    <div class="container">
+        <div class="project" style="background-image: url('padova1.png');background-size: 100% 100%;">
+            <img src="picture2.jpg" alt="Project 1" style="border-radius: 50%;margin-top: 12%;margin-left: 34%;">
+            <p style="text-align: center;color: white;font-size: 40px;float: none;margin-right: 0%;">Francesco Crisci</p>
+        </div>
+    </div>
+    <div class="container" id="Resume">
+        <div class="resume">
+            <h1>Who am I?</h1>
+            <h1>Francesco Crisci</h1>
+                    <h3>Unipd '22, Master Computer Engineering student, Computer Engineer</h3>
+                    <p>I'm a master computer engineering student at Padua's university, Italy. I got a bachelor from the same university in 2022 and my passions is Computer Science.</p>
+                    <p>My interests include Neurorobotics & Neurorehabilitation, Artificial Inteligence, Blockchain and Machine learning.</p>
+                    <p>I'm currently studing  my master at Padua's university in AI and Robotics.</p>
+                    <p>My hobbies include reading, carving wood, drawing and painting, but also creating projects related to game development.</p>
+                    <h4>University of Padua (UniPd)</h4>
+                        <p>Master student in computer engineering</p>
+                        <p>Bachelor in computer engineering</p>
+                    <h4>Past work experience</h4>
+                        <p>Internship at Sinclab S.R.L in NTF's minting automatism and smart contract development.</p>
+                        <p>Kitchen steward at Osteria Sucabaruca</p>
+                        <p>Promoter phoneline provider at Fastweb</p>
+                        <p>Electrician at EES(Elettro Edil System)</p>
+                    <h4>Languages</h4>
+                        <p>Italian (Native)</p>
+                        <p>English C1 level</p>
+                        <p>Spanish B1 level</p>
+        </div>
+    </div>
+    <div class="container" id="MySkills">
+        <div class="skills">
+            <h2>Python</h2>
+            <img src="py.png" alt="Skill 1">
+            <p>My skills in python have bee developed thanks to my internship project, Kattis' problems and personal programs. Due to my master degree i'm studying the possibilities which python offers in the machine learning field.</p>
+        </div>
+        <div class="skills">
+            <h2>CPP</h2>
+            <img src="cpp.png" alt="Skill 2">
+            <p>C++ is one of the language i've been dealing a lot with due to my bachelor study plan. The skill adopted during the past years include development of libraries and the use of cmake.</p>
+        </div>
+        <div class="skills">
+            <h2>MySQL</h2>
+            <img src="sql.png" alt="Skill 3">
+            <p>MySQL is one of the languages i studied during the database course in my bachelor. During this course i've obtained the skills to design relational database, how to use properly relational algebra and how to implement everything with MySQL</p>
+        </div>
+        <div class="skills">
+            <h2>Solidity</h2>
+            <img src="solidity.png" alt="Skill 4">
+            <p>My skills in solidity have been obtained thanks to my internship, where i've developed a smart contract following the standard ERC721. The contract was then used into the software developed for my thesis, which allows to make automatic the deployi of the contract, the minting of the NFTs, the revealing and all the operations which the user requires. Everything can be seen in the <a href="">thesis</a></p>
+        </div>
+        <div class="skills">
+            <h2>Java</h2>
+            <img src="java.png" alt="Skill 5">
+            <p>Java is the language i've used the least among all the others. I've got pretty good knowledge of it due to the fundementals of programming and the data structure and algorithms course in my bachelor. I've developed just a few projects with it, but i'm still capable of understanding and to use it.</p>
+        </div>
+        <div class="skills">
+            <h2>Android</h2>
+            <img src="android.png" alt="Skill 6">
+            <p>During my studies i was able to get in contact with the development of android application, and i got th epossibility to develop my personal version of a GPS with movement tracking and location data visualization.</p>
+        </div>
+    </div>
+    <section id="portfolio">
+        <div class="project2">
+            <div class="project-details">
+                <h2>Project 1: Automatic NFT minting and generative art</h2>
+                <p>Description of the project.</p>
+                <p>Technologies Used: Python, Solidity, Brownie</p>
+                <p>Key Achievements: Mention achievements.</p>
+            </div>
+            <div class="project-image">
+                <img src="nft.png" alt="Project 1">
+            </div>
+        </div>
+        <div class="project2">
+            <div class="project-details">
+                <h2>Project 2: Hand Tracker</h2>
+                <p>Description of the project.</p>
+                <p>Technologies Used: python, openCV</p>
+                <p>Key Achievements: Mention achievements.</p>
+            </div>
+            <div class="project-image">
+                <img src="tracker.jpg" alt="Project 2">
+            </div>
+        </div>
+        <div class="project2">
+            <div class="project-details">
+                <h2>Project 3: Preprocessing of plancton images for Deep Convolutional Neural Networks</h2>
+                <p>Description of the project.</p>
+                <p>Technologies Used: Matlab</p>
+                <p>Key Achievements: Mention achievements.</p>
+            </div>
+            <div class="project-image">
+                <img src="Plancton.jpg" alt="Project 3">
+            </div>
+        </div>
+        <div class="project2">
+            <div class="project-details">
+                <h2>Project 4: Solution of Kattis problems</h2>
+                <p>Description of the project.</p>
+                <p>Technologies Used: Python, C++</p>
+                <p>Key Achievements: Mention achievements.</p>
+            </div>
+            <div class="project-image">
+                <img src="kattis.png" alt="Project 4">
+            </div>
+        </div>
+        <div class="project2">
+            <div class="project-details">
+                <h2>Project 5: Food segmentation and food leftover estimation</h2>
+                <p>Description of the project.</p>
+                <p>Technologies Used: C++, openCV</p>
+                <p>Key Achievements: Mention achievements.</p>
+            </div>
+            <div class="project-image">
+                <img src="food_image_pruned_keypoints.jpg" alt="Project 5">
+            </div>
+        </div>
+        <div class="project2">
+            <div class="project-details">
+                <h2>Project 6: University notes</h2>
+                <p>Description of the project.</p>
+                <p>Technologies Used: Latex</p>
+                <p>Key Achievements: Mention achievements.</p>
+            </div>
+            <div class="project-image">
+                <img src="notes.jpg" alt="Project 6">
+            </div>
+        </div>
+    </section>
+    <div class="container" id="contacts">
+        <div class="contacts" style="background-image: url('map.jpg');background-size: 100% 100%;">
+            <p style="text-align: center;color: white;font-size: 40px;float: none;margin-right: 0%;">Contact Me</p>
+            <p style="text-align: center;color: white;font-size: 40px;float: none;margin-right: 0%;">You can use the info reported here</p>
+            <p style="text-align: center;color: white;font-size: 40px;float: none;margin-right: 0%;">E-mail: <a href="" id="a">criscifrancesco00@gmail.com</a></p>
+            <p style="text-align: center;color: white;font-size: 40px;float: none;margin-right: 0%;">Phone: <a href="" id="a">+39 3886390629</a></p>
+        </div>
+    </div>
+</body>
+</html>

@@ -1,0 +1,36 @@
+<div class="container">
+        <div class="project">
+            <h2>Generative Art and automatic mint procedure</h2>
+            <img src="nft.png" alt="Project 1">
+            <p> The goal of the
+                project was to implement, through the combination of the programming languages python
+                and solidity, the process of NFT realization and minting automatism on Polygon test network.
+                As a result, a collection of 500 unique images were obtained, which through the automatic
+                of minting, were made an NFT collection, a collection visible on the openSea platform.</p>
+        </div>
+        <div class="project">
+            <h2>Hand tracker</h2>
+            <img src="tracker.jpg" alt="Project 2">
+            <p>Description of your project goes here.</p>
+        </div>
+        <div class="project">
+            <h2>Plancton preprocessing for DCNN</h2>
+            <img src="Plancton.jpg" alt="Project 3">
+            <p>Description of your project goes here.</p>
+        </div>
+        <div class="project">
+            <h2>Competitive programming</h2>
+            <img src="kattis.png" alt="Project 4">
+            <p>Description of your project goes here.</p>
+        </div>
+        <div class="project">
+            <h2>Food recognition and leftover estimation</h2>
+            <img src="food_image_pruned_keypoints.jpg" alt="Project 2">
+            <p>Description of your project goes here.</p>
+        </div>
+        <div class="project">
+            <h2>University notes</h2>
+            <img src="notes.jpg" alt="Project 2">
+            <p>Description of your project goes here.</p>
+        </div>
+    </div>
