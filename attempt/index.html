@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="style.css">
+        <title>Portfolio</title>
+    </head>
+    <body>
+        <div class="container" id="home">
+            <div class= "layout">
+                <h1>Hi, I'm <br>Francesco Crisci<br><p>Student and Developer</p></h1>
+                <div class ="Button">
+                    <p>GITHUB</p>
+                    <p>RESUME</p>
+                </div>
+            </div>
+            <div class= "layout" id="layoutRight">
+                <div class="toolbar">
+                    <p onclick="showAbout()">ABOUT</p>
+                    <p onclick="showSkill()">SKILLS</p>
+                    <p>PROJECTS</p>
+                    <p>CONTACTS</p>
+                </div>
+                <div class="profile">
+                    <div class="occlusore">
+                    <p style="opacity: 0;">a</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="container" id="about" style="display: none;">
+            <div class= "layout">
+                <h1>
+                    <p> I'm currently studying my master in Computer<br>
+                         Engineering AI and Robotics at uniPd.</p></h1>
+                <div class="card">
+                    <div class="abouts" id="barLanguage">
+                        <p>Italian</p>
+                        <div class="bar">
+                            <div class="skills italian">Native</div>
+                        </div>
+                        <p>English</p>
+                        <div class="bar">
+                            <div class="skills english">C1</div>
+                        </div>
+                        <p>Spanish</p>
+                        <div class="bar">
+                            <div class="skills spanish">B1</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class= "layout" id="layoutRight" >
+                <div class="toolbar">
+                    <p onclick="showMain()">HOME</p>
+                    <p onclick="showSkill()">SKILLS</p>
+                    <p>PROJECTS</p>
+                    <p>CONTACTS</p>
+                </div>
+                <div class="card" >
+                    <div class="abouts">
+                        <p>My profetional interests include: software development, back-end, machine learning,
+                             deep learning and artificial intelligence.</p>
+                    </div>
+                    <div class="abouts" id="barLanguage">
+                        <p>Italian</p>
+                        <div class="bar">
+                            <div class="skills italian">Native</div>
+                        </div>
+                        <p>English</p>
+                        <div class="bar">
+                            <div class="skills english">C1</div>
+                        </div>
+                        <p>Spanish</p>
+                        <div class="bar">
+                            <div class="skills spanish">B1</div>
+                        </div>
+                    </div>
+                    <div class="abouts">
+                        <p>My hobbies include carving wood, reading, theater and cooking</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="container" id="skill" style="display: none;">
+            <div class= "layout">
+                <div class="toolbar">
+                    <p style="opacity: 0;">HOME</p>
+                </div>
+                <div class="skill" style="box-shadow: none;">
+                    <div id="title">
+                        <h1>Programming languages</h1>
+                    </div>
+                    <div id = "info">
+                        <p>Python</p>
+                        <div class="bar">
+                            <div class="skills python">90%</div>
+                        </div>
+                        <p>C++</p>
+                        <div class="bar">
+                            <div class="skills cpp">80%</div>
+                        </div>
+                        <p>Java</p>
+                        <div class="bar">
+                            <div class="skills java">60%</div>
+                        </div>
+                        <p>Solidity</p>
+                        <div class="bar">
+                            <div class="skills sol">70%</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class= "layout" id="layoutRight" >
+                <div class="toolbar">
+                    <p onclick="showMain()">HOME</p>
+                    <p onclick="showAbout()">ABOUT</p>
+                    <p>PROJECTS</p>
+                    <p>CONTACTS</p>
+                </div>
+                <div class="skill" style="background-image: none;box-shadow: none;">
+                    <div id="title">
+                        <h1>Minor knowledge</h1>
+                    </div>
+                    <div id = "info">
+                        <p>Git</p>
+                        <div class="bar">
+                            <div class="skills git">75%</div>
+                        </div>
+                        <p>HTML</p>
+                        <div class="bar">
+                            <div class="skills html">60%</div>
+                        </div>
+                        <p>CSS</p>
+                        <div class="bar">
+                            <div class="skills css">60%</div>
+                        </div>
+                        <p>SQL</p>
+                        <div class="bar">
+                            <div class="skills sql">70%</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <script>
+            const about = document.getElementById("about");
+            const home = document.getElementById("home");
+            const skill = document.getElementById("skill");
+            function showAbout(){
+                about.style.display="flex";
+                home.style.display="none";
+                skill.style.display="none";
+                
+            }
+            function showMain(){
+                about.style.display="none";
+                home.style.display="flex";
+                skill.style.display="none";
+            }
+            function showSkill(){
+                about.style.display="none";
+                skill.style.display="flex";
+                home.style.display="none";
+            }
+        </script>
+    </body>
+</html>
