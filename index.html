@@ -205,6 +205,12 @@
             align-items: center;
             margin-left: 15%;
         }
+        #myDiv{
+            display: none;
+        }
+        #myDiv2{
+            display: none;
+        }
         @media screen and (max-width: 768px) {
             .project {
                 padding: 10px;
@@ -219,14 +225,17 @@
                 top: 0;
                 width: 100%;
                 height: 100%;
-                z-index: 0;
+                z-index: 4;
             }
-            .button #myDiv{
+            #myDiv{
+                display: block;
                 float:left;
                 width: 60px;
                 height: 60px;
                 border-radius: 30px;
+                position:fixed;
                 background-color: yellow;
+                z-index: 4;
                 opacity:0.9;
                 margin-top: 15px;
                 margin-left: 15px;
@@ -271,6 +280,8 @@
                 flex: 1;
                 flex-direction: column;
                 align-items: center;
+                position: fixed;
+                z-index: 1;
                 width: 0%;
                 height: 0%;
             }
@@ -312,7 +323,7 @@
             </div>
         </div>
     </header>
-    <header class="button" id="nomeacaso">
+    <!---<header class="button" id="nomeacaso">--->
         <div id = "myDiv">
             <img id = "menu" src="menu.png" style="width:40px;height: 40px;margin-top: 10px;margin-left: 10px;">
         </div>
@@ -329,7 +340,7 @@
             const myDiv = document.getElementById("myDiv");
             const myDiv2 = document.getElementById("myDiv2");
             const menu = document.getElementById("menu");
-            const father = document.getElementById("nomeacaso");
+            //const father = document.getElementById("nomeacaso");
             myDiv.addEventListener("click", () => {
                     myDiv2.style.backgroundColor = "white";
                     myDiv2.style.width = 100+"%";
@@ -338,15 +349,16 @@
                     myDiv2.style.marginTop = 0;
                     myDiv2.style.borderRadius = 0;
                     myDiv2.style.opacity = 0.8;
-                    father.style.zIndex = 1;
+                    //father.style.zIndex = 1;
                     myDiv2.style.display="block";
                     myDiv.style.display="none";
                     menu.style.display="none";
             });
             function closeDiv() {
-                myDiv.style.cssText = "float: left; width: 60px; height: 60px; border-radius: 30px; background-color: yellow; z-index: 0; opacity: 0.9; margin-top: 15px; margin-left: 15px; box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.5);";
+                myDiv.style.cssText = "float: left; width: 60px; height: 60px; border-radius: 30px; background-color: yellow; z-index: 4; opacity: 0.9; margin-top: 15px; margin-left: 15px; box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.5);";
+                menu.style.zIndex=4;
                 myDiv2.style.display = "none";
-                father.style.zIndex = 0;
+                //father.style.zIndex = 0;
                 myDiv2.style.width = 0+"%";
                 myDiv2.style.height = 0+"%";
                 menu.style.display="block";
@@ -355,7 +367,7 @@
             }
 
         </script>
-    </header>
+    <!---</header>--->
     <div style="width:100%;height:35px;" id="dummy">
     </div>
     <div class="container">
