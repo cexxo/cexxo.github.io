@@ -18,7 +18,7 @@
             </div>
             <div class= "layout" id="layoutRight">
                 <div class="toolbar">
-                    <p onclick="showMain()">HOME</p>
+                    <p onclick="moveAway()">HOME</p>
                     <p onclick="showAbout()">ABOUT</p>
                     <p onclick="showSkill()">SKILLS</p>
                     <p onclick="showProjects()">PROJECTS</p>
@@ -271,6 +271,31 @@
                 info3.style.display="none";
                 info3.style.height=0+"%";
                 info3.style.marginTop=100+"%";
+                }
+            }
+            function moveAway(){
+                let id = null;
+                clearInterval(id);
+                id = setInterval(frame,20);
+                let down=4;
+                let up = -50;
+                about.style.marginTop = up+"%";
+                about.style.zIndex=-5;
+                home.style.zIndex=5;
+                about.style.display="flex";
+                about.style.position="fixed";
+                home.style.position="fixed";
+                function frame(){
+                    if(down == -50 && up == 4){
+                        clearInterval(id);
+                        home.style.display="none";
+                        home.style.marginTop=4+"%";
+                    }else{
+                        down-=1;
+                        up+=1;
+                        home.style.marginTop = down+"%";
+                        about.style.marginTop = up+"%";
+                    }
                 }
             }
             function myMove() {
