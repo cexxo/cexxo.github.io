@@ -64,6 +64,7 @@ body{
 .Button p{
     font-size: 24px;
     color:white;
+    cursor: pointer;
 }
 .toolbar a{
     font-size: 24px;
@@ -73,12 +74,15 @@ body{
 
 .Button p:hover{
     color:#427AA1;
+    text-shadow: 2px 2px #333;
+    scale: 1.1;
 }
 
 .toolbar p{
     font-size: 20px;
     color:white;
     font-weight: bold;
+    cursor: pointer;
 }
 .toolbar p:hover{color:#427AA1;}
 
@@ -87,9 +91,11 @@ body{
     width: 100%;
     background: url('pic.png');
     background-size: 100% 100%;
+    background-repeat: no-repeat;
+    background-position: 50% 50%;
 }
 .card{
-    height: 90%;
+    height: 80%;
     width: 90%;
     background-color:#021427;
     background-size: 100% 100%;
@@ -112,7 +118,7 @@ body{
     box-shadow: 2px 2px 2px rgba(0, 0, 0, 0.8);
 }
 .skill{
-    height: 100%;
+    height: 80%;
     width: 80%;
     background-size: 100% 100%;
     border-radius: 15px;
@@ -143,13 +149,18 @@ body{
 #skill p{
     font-size: 20px;
 }
+#date{
+    color:#427AA1;
+    font-size: 20px;
+}
 .abouts p{
-    font-size: 16px;
+    font-size: 18px;
 }
 .bar {
     width: 100%; /* Full width */
     background-color: #ddd; /* Grey background */
     border-radius: 5px;
+    box-shadow: 8px 8px 8px rgba(0, 0, 0, 0.8);
   }
   .python {width: 90%; background-color: #427AA1;} /* Green */
   .cpp {width: 80%; background-color: #427AA1;} /* Green */
@@ -162,6 +173,53 @@ body{
   .italian {width: 100%; background-color: #427AA1;border-radius: 5px;} /* Green */
   .english {width: 84%; background-color: #427AA1;} /* Green */
   .spanish {width: 50%; background-color: #427AA1;} /* Green */
+.layoutProjects{
+    flex:1;
+    flex-direction: row;
+    justify-content: space-evenly;
+    display: flex;
+    align-items: center;
+    width: 90%;
+    height: 80%;
+}
+.project{
+    width: 80%;
+    height: 80%;
+    background-color: #427AA1;
+    border-radius: 15px;
+    margin-left: 2%;
+    margin-right: 2%;
+}
+.slideInfo{
+    width:100%;
+    height: 0%;
+    opacity: 0.9;
+    background-color: #021427;
+    margin-top:100%;
+    display: none;
+    border-top-left-radius: 5px;
+    border-top-right-radius: 5px;
+    position: relative;
+    flex: 1;
+    flex-direction: column;
+}
+.slideInfo p{
+    font-size: 16px;
+}
+.ghbutton{
+    width: 20%;
+    height: 20%;
+    background-image: url('../gh.png');
+    background-size: 100% 100%;
+    border-radius: 50%;
+    margin-left: 78%;
+    margin-top: 35%;
+    filter:invert(1);
+    cursor:pointer;
+}
+.ghbutton:hover{
+    scale:0.9;
+}
 @media screen and (max-width: 1000px) {
     #layoutRight{
         display: none;

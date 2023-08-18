@@ -7,6 +7,7 @@
         <title>Portfolio</title>
     </head>
     <body>
+        <!--Home-->
         <div class="container" id="home">
             <div class= "layout">
                 <h1>Hi, I'm <br>Francesco Crisci<br><p>Student and Developer</p></h1>
@@ -17,10 +18,11 @@
             </div>
             <div class= "layout" id="layoutRight">
                 <div class="toolbar">
+                    <p onclick="showMain()">HOME</p>
                     <p onclick="showAbout()">ABOUT</p>
                     <p onclick="showSkill()">SKILLS</p>
-                    <p>PROJECTS</p>
-                    <p>CONTACTS</p>
+                    <p onclick="showProjects()">PROJECTS</p>
+                    <p onclick="showContacts()">CONTACTS</p>
                 </div>
                 <div class="profile">
                     <div class="occlusore">
@@ -29,6 +31,7 @@
                 </div>
             </div>
         </div>
+        <!--About-->
         <div class="container" id="about" style="display: none;">
             <div class= "layout">
                 <h1>
@@ -54,9 +57,10 @@
             <div class= "layout" id="layoutRight" >
                 <div class="toolbar">
                     <p onclick="showMain()">HOME</p>
+                    <p onclick="showAbout()">ABOUT</p>
                     <p onclick="showSkill()">SKILLS</p>
-                    <p>PROJECTS</p>
-                    <p>CONTACTS</p>
+                    <p onclick="showProjects()">PROJECTS</p>
+                    <p onclick="showContacts()">CONTACTS</p>
                 </div>
                 <div class="card" >
                     <div class="abouts">
@@ -64,18 +68,8 @@
                              deep learning and artificial intelligence.</p>
                     </div>
                     <div class="abouts" id="barLanguage">
-                        <p>Italian</p>
-                        <div class="bar">
-                            <div class="skills italian">Native</div>
-                        </div>
-                        <p>English</p>
-                        <div class="bar">
-                            <div class="skills english">C1</div>
-                        </div>
-                        <p>Spanish</p>
-                        <div class="bar">
-                            <div class="skills spanish">B1</div>
-                        </div>
+                        <p id="date">2022-Today <p>Master Student Computer Engineering</p></p>
+                        <p id="date">2019-2022 <p>Bachelor degree Computer Engineering</p></p>
                     </div>
                     <div class="abouts">
                         <p>My hobbies include carving wood, reading, theater and cooking</p>
@@ -83,6 +77,7 @@
                 </div>
             </div>
         </div>
+        <!--Skills-->
         <div class="container" id="skill" style="display: none;">
             <div class= "layout">
                 <div class="toolbar">
@@ -116,8 +111,9 @@
                 <div class="toolbar">
                     <p onclick="showMain()">HOME</p>
                     <p onclick="showAbout()">ABOUT</p>
-                    <p>PROJECTS</p>
-                    <p>CONTACTS</p>
+                    <p onclick="showSkill()">SKILLS</p>
+                    <p onclick="showProjects()">PROJECTS</p>
+                    <p onclick="showContacts()">CONTACTS</p>
                 </div>
                 <div class="skill" style="background-image: none;box-shadow: none;">
                     <div id="title">
@@ -144,25 +140,195 @@
                 </div>
             </div>
         </div>
+        <!--Projects-->
+        <div class="container" id="projects" style="display: none;">
+            <div class= "layout" id="layoutRight">
+                <div class="toolbar" style="margin-left: 50%;width:50%">
+                    <p onclick="showMain()">HOME</p>
+                    <p onclick="showAbout()">ABOUT</p>
+                    <p onclick="showSkill()">SKILLS</p>
+                    <p onclick="showProjects()">PROJECTS</p>
+                    <p onclick="showContacts()">CONTACTS</p>
+                </div>
+                <div class="layoutProjects">
+                    <div class="project" style="background-image: url('../nft.png');background-size: 100% 100%;" id="proj1"
+                    onmouseenter="myMove()" >
+                        <div class="slideInfo" id="slide1">
+                            <p>Generative Art and automatic mint process<br><br>
+                            Languages:Python, Solidity</p>
+                            <div class="ghbutton" onclick="gen()">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="project" style="background-image: url('../tracker.jpg');background-size: 100% 100%;" 
+                    onmouseenter="myMove2()" >
+                        <div class="slideInfo" id="slide2">
+                            <p>Hand tracker<br><br>
+                            Languages: Python</p>
+                                <div class="ghbutton" onclick="tracker()">
+                                </div>
+                        </div>
+                    </div>
+                    <div class="project" style="background-image: url('../food_image_pruned_keypoints.jpg');background-size: 100% 100%;"
+                    onmouseenter="myMove3()" >
+                        <div class="slideInfo" id="slide3">
+                            <p>Food segmentation and leftover estimation<br>
+                                <br>Languages: C++
+                            </p>
+                            <div class="ghbutton" onclick="food()">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!--Contacts-->
+        <div class="container" id="contact" style="display: none;">
+            <div class= "layout">
+                <h1>Interested in me?</p></h1>
+                <div class ="Button">
+                    <p>GITHUB</p>
+                    <p>RESUME</p>
+                </div>
+            </div>
+            <div class= "layout" id="layoutRight">
+                <div class="toolbar">
+                    <p onclick="showMain()">HOME</p>
+                    <p onclick="showAbout()">ABOUT</p>
+                    <p onclick="showSkill()">SKILLS</p>
+                    <p onclick="showProjects()">PROJECTS</p>
+                    <p onclick="showContacts()">CONTACTS</p>
+                </div>
+                <div class="profile" style="background-image: none;">
+                    <p>You can contact me at the following:<br>
+                    e-mail: criscifrancesco00@gmail.com<br>
+                    phone:+39 3886390629</p>
+                </div>
+            </div>
+        </div>
+        <!--Script-->
         <script>
             const about = document.getElementById("about");
             const home = document.getElementById("home");
             const skill = document.getElementById("skill");
+            const proj = document.getElementById("projects");
+            const contact = document.getElementById("contact");
+            const proj1 = document.getElementById("proj1");
+            const info1 = document.getElementById("slide1");
+            const info2 = document.getElementById("slide2");
+            const info3 = document.getElementById("slide3");
             function showAbout(){
                 about.style.display="flex";
                 home.style.display="none";
                 skill.style.display="none";
-                
+                proj.style.display="none";
+                contact.style.display="none";
             }
             function showMain(){
                 about.style.display="none";
                 home.style.display="flex";
                 skill.style.display="none";
+                proj.style.display="none";
+                contact.style.display="none";
             }
             function showSkill(){
                 about.style.display="none";
                 skill.style.display="flex";
                 home.style.display="none";
+                proj.style.display="none";
+                contact.style.display="none";
+            }
+            function showProjects(){
+                about.style.display="none";
+                skill.style.display="none";
+                home.style.display="none";
+                proj.style.display="flex";
+                contact.style.display="none";
+            }
+            function showContacts(){
+                about.style.display="none";
+                skill.style.display="none";
+                home.style.display="none";
+                proj.style.display="none";
+                contact.style.display="flex";
+            }
+            function hideInfo(){
+                if(info1.style.height == 80+"%"){
+                info1.style.display="none";
+                info1.style.height=0+"%";
+                info1.style.marginTop=100+"%";
+                }
+            }
+            function hideInfo2(){
+                if(info2.style.height == 80+"%"){
+                info2.style.display="none";
+                info2.style.height=0+"%";
+                info2.style.marginTop=100+"%";
+                }
+            }
+            function hideInfo3(){
+                if(info3.style.height == 80+"%"){
+                info3.style.display="none";
+                info3.style.height=0+"%";
+                info3.style.marginTop=100+"%";
+                }
+            }
+            function myMove() {
+                info1.style.display="flex";
+                let id = null;
+                let pos = info1.style.height;
+                clearInterval(id);
+                id = setInterval(frame, 5);
+                function frame() {
+                    if (pos == 80) {
+                    clearInterval(id);
+                    } else {
+                    pos++;
+                    info1.style.height = pos + '%';
+                    info1.style.marginTop = 100 - pos + '%';
+                    }
+                }
+            }
+            function myMove2() {
+                info2.style.display="flex";
+                let id = null;
+                let pos = info2.style.height;
+                clearInterval(id);
+                id = setInterval(frame, 5);
+                function frame() {
+                    if (pos == 80) {
+                    clearInterval(id);
+                    } else {
+                    pos++;
+                    info2.style.height = pos + '%';
+                    info2.style.marginTop = 100 - pos + '%';
+                    }
+                }
+            }
+            function myMove3() {
+                info3.style.display="flex";
+                let id = null;
+                let pos = info3.style.height;
+                clearInterval(id);
+                id = setInterval(frame, 5);
+                function frame() {
+                    if (pos == 80) {
+                    clearInterval(id);
+                    } else {
+                    pos++;
+                    info3.style.height = pos + '%';
+                    info3.style.marginTop = 100 - pos + '%';
+                    }
+                }
+            }
+            function tracker(){
+                window.open('https://github.com/cexxo/Tracker');
+            }
+            function gen(){
+                window.open('https://github.com/cexxo/GenerativeArt');
+            }
+            function food(){
+                window.open('https://github.com/eliferin14/Food-leftovers-recognition');
             }
         </script>
     </body>
