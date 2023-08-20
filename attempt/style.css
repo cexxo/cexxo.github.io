@@ -18,7 +18,7 @@ body{
     flex-direction: row;
     display: flex;
     justify-content: space-between;
-    opacity: 0.9;
+    opacity: 0.8;
 }
 .layout{
     width:50%;
@@ -220,8 +220,60 @@ body{
 .ghbutton:hover{
     scale:0.9;
 }
+.toggle{
+    display: none;
+}
 @media screen and (max-width: 1000px) {
+    body{
+        background-image: linear-gradient(to bottom right,rgb(40,40,40),rgb(20,20,200));
+        
+    }
     #layoutRight{
         display: none;
     }
+    .toolbar{
+        display: none;
+    }
+    .container{
+        margin: 4% auto;
+    }
+    .toggle{
+        display: flex;
+        background-color: #FAF0CA;
+        width:60px;
+        height:60px;
+        border-radius: 50%;
+        position: absolute;
+        z-index: 20;
+        opacity: 1;
+        margin-top: -3%;
+        margin-left: -1%;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+    .toggle #menu{
+        display: none;
+        position: absolute;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+    }
+    .choice{
+        background-color: #021427;
+        width:400px;
+        height:100px;
+        display: flex;
+        text-align: center;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+    .choice p{
+        text-align: center;
+        color: white;
+        font-size: 20px;
+    }
+    
 }

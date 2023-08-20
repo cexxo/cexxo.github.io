@@ -7,6 +7,15 @@
         <title>Portfolio</title>
     </head>
     <body>
+        <div class="toggle" id="toggle" onclick="expandToggle()">
+            <div class="menu" id="menu">
+                <div class="choice" onclick="goTo(this,'home')"><p>HOME</p></div>
+                <div class="choice" onclick="goTo(this,'about')"><p>ABOUT</p></div>
+                <div class="choice" onclick="goTo(this,'skill')"><p>SKILL</p></div>
+                <div class="choice" onclick="goTo(this,'projects')"><p>PROJECTS</p></div>
+                <div class="choice" onclick="goTo(this,'contact')"><p>CONTACTS</p></div>
+            </div>
+        </div>
         <!--Home-->
         <div class="container" id="home">
             <div class= "layout">
@@ -18,11 +27,11 @@
             </div>
             <div class= "layout" id="layoutRight">
                 <div class="toolbar">
-                    <p onclick="moveAway()">HOME</p>
-                    <p onclick="showAbout()">ABOUT</p>
-                    <p onclick="showSkill()">SKILLS</p>
-                    <p onclick="showProjects()">PROJECTS</p>
-                    <p onclick="showContacts()">CONTACTS</p>
+                    <p onclick="">HOME</p>
+                    <p onclick="swapCards('home','about')">ABOUT</p>
+                    <p onclick="swapCards('home','skill')">SKILLS</p>
+                    <p onclick="swapCards('home','projects')">PROJECTS</p>
+                    <p onclick="swapCards('home','contact')">CONTACTS</p>
                 </div>
                 <div class="profile">
                     <div class="occlusore">
@@ -56,11 +65,11 @@
             </div>
             <div class= "layout" id="layoutRight" >
                 <div class="toolbar">
-                    <p onclick="showMain()">HOME</p>
-                    <p onclick="showAbout()">ABOUT</p>
-                    <p onclick="showSkill()">SKILLS</p>
-                    <p onclick="showProjects()">PROJECTS</p>
-                    <p onclick="showContacts()">CONTACTS</p>
+                    <p onclick="swapCards('about','home')">HOME</p>
+                    <p onclick="">ABOUT</p>
+                    <p onclick="swapCards('about','skill')">SKILLS</p>
+                    <p onclick="swapCards('about','projects')">PROJECTS</p>
+                    <p onclick="swapCards('about','contact')">CONTACTS</p>
                 </div>
                 <div class="card" >
                     <div class="abouts">
@@ -109,11 +118,11 @@
             </div>
             <div class= "layout" id="layoutRight" >
                 <div class="toolbar">
-                    <p onclick="showMain()">HOME</p>
-                    <p onclick="showAbout()">ABOUT</p>
-                    <p onclick="showSkill()">SKILLS</p>
-                    <p onclick="showProjects()">PROJECTS</p>
-                    <p onclick="showContacts()">CONTACTS</p>
+                    <p onclick="swapCards('skill','home')">HOME</p>
+                    <p onclick="swapCards('skill','about')">ABOUT</p>
+                    <p onclick="">SKILLS</p>
+                    <p onclick="swapCards('skill','projects')">PROJECTS</p>
+                    <p onclick="swapCards('skill','contact')">CONTACTS</p>
                 </div>
                 <div class="skill" style="background-image: none;box-shadow: none;">
                     <div id="title">
@@ -144,11 +153,11 @@
         <div class="container" id="projects" style="display: none;">
             <div class= "layout" id="layoutRight">
                 <div class="toolbar" style="margin-left: 50%;width:50%">
-                    <p onclick="showMain()">HOME</p>
-                    <p onclick="showAbout()">ABOUT</p>
-                    <p onclick="showSkill()">SKILLS</p>
-                    <p onclick="showProjects()">PROJECTS</p>
-                    <p onclick="showContacts()">CONTACTS</p>
+                    <p onclick="swapCards('projects','home')">HOME</p>
+                    <p onclick="swapCards('projects','about')">ABOUT</p>
+                    <p onclick="swapCards('projects','skill')">SKILLS</p>
+                    <p onclick="">PROJECTS</p>
+                    <p onclick="swapCards('projects','contact')">CONTACTS</p>
                 </div>
                 <div class="layoutProjects">
                     <div class="project" style="background-image: url('../nft.png');background-size: 100% 100%;" id="proj1"
@@ -193,11 +202,11 @@
             </div>
             <div class= "layout" id="layoutRight">
                 <div class="toolbar">
-                    <p onclick="showMain()">HOME</p>
-                    <p onclick="showAbout()">ABOUT</p>
-                    <p onclick="showSkill()">SKILLS</p>
-                    <p onclick="showProjects()">PROJECTS</p>
-                    <p onclick="showContacts()">CONTACTS</p>
+                    <p onclick="swapCards('contact','home')">HOME</p>
+                    <p onclick="swapCards('contact','about')">ABOUT</p>
+                    <p onclick="swapCards('contact','skill')">SKILLS</p>
+                    <p onclick="swapCards('contact','projects')">PROJECTS</p>
+                    <p onclick="">CONTACTS</p>
                 </div>
                 <div class="profile" style="background-image: none;">
                     <p>You can contact me at the following:<br>
@@ -207,154 +216,8 @@
             </div>
         </div>
         <!--Script-->
-        <script>
-            const about = document.getElementById("about");
-            const home = document.getElementById("home");
-            const skill = document.getElementById("skill");
-            const proj = document.getElementById("projects");
-            const contact = document.getElementById("contact");
-            const proj1 = document.getElementById("proj1");
-            const info1 = document.getElementById("slide1");
-            const info2 = document.getElementById("slide2");
-            const info3 = document.getElementById("slide3");
-            function showAbout(){
-                about.style.display="flex";
-                home.style.display="none";
-                skill.style.display="none";
-                proj.style.display="none";
-                contact.style.display="none";
-            }
-            function showMain(){
-                about.style.display="none";
-                home.style.display="flex";
-                skill.style.display="none";
-                proj.style.display="none";
-                contact.style.display="none";
-            }
-            function showSkill(){
-                about.style.display="none";
-                skill.style.display="flex";
-                home.style.display="none";
-                proj.style.display="none";
-                contact.style.display="none";
-            }
-            function showProjects(){
-                about.style.display="none";
-                skill.style.display="none";
-                home.style.display="none";
-                proj.style.display="flex";
-                contact.style.display="none";
-            }
-            function showContacts(){
-                about.style.display="none";
-                skill.style.display="none";
-                home.style.display="none";
-                proj.style.display="none";
-                contact.style.display="flex";
-            }
-            function hideInfo(){
-                if(info1.style.height == 80+"%"){
-                info1.style.display="none";
-                info1.style.height=0+"%";
-                info1.style.marginTop=100+"%";
-                }
-            }
-            function hideInfo2(){
-                if(info2.style.height == 80+"%"){
-                info2.style.display="none";
-                info2.style.height=0+"%";
-                info2.style.marginTop=100+"%";
-                }
-            }
-            function hideInfo3(){
-                if(info3.style.height == 80+"%"){
-                info3.style.display="none";
-                info3.style.height=0+"%";
-                info3.style.marginTop=100+"%";
-                }
-            }
-            function moveAway(){
-                let id = null;
-                clearInterval(id);
-                id = setInterval(frame,20);
-                let down=4;
-                let up = -50;
-                about.style.marginTop = up+"%";
-                about.style.zIndex=-5;
-                home.style.zIndex=5;
-                about.style.display="flex";
-                about.style.position="fixed";
-                home.style.position="fixed";
-                function frame(){
-                    if(down == -50 && up == 4){
-                        clearInterval(id);
-                        home.style.display="none";
-                        home.style.marginTop=4+"%";
-                    }else{
-                        down-=1;
-                        up+=1;
-                        home.style.marginTop = down+"%";
-                        about.style.marginTop = up+"%";
-                    }
-                }
-            }
-            function myMove() {
-                info1.style.display="flex";
-                let id = null;
-                let pos = info1.style.height;
-                clearInterval(id);
-                id = setInterval(frame, 5);
-                function frame() {
-                    if (pos == 80) {
-                    clearInterval(id);
-                    } else {
-                    pos++;
-                    info1.style.height = pos + '%';
-                    info1.style.marginTop = 100 - pos + '%';
-                    }
-                }
-            }
-            function myMove2() {
-                info2.style.display="flex";
-                let id = null;
-                let pos = info2.style.height;
-                clearInterval(id);
-                id = setInterval(frame, 5);
-                function frame() {
-                    if (pos == 80) {
-                    clearInterval(id);
-                    } else {
-                    pos++;
-                    info2.style.height = pos + '%';
-                    info2.style.marginTop = 100 - pos + '%';
-                    }
-                }
-            }
-            function myMove3() {
-                info3.style.display="flex";
-                let id = null;
-                let pos = info3.style.height;
-                clearInterval(id);
-                id = setInterval(frame, 5);
-                function frame() {
-                    if (pos == 80) {
-                    clearInterval(id);
-                    } else {
-                    pos++;
-                    info3.style.height = pos + '%';
-                    info3.style.marginTop = 100 - pos + '%';
-                    }
-                }
-            }
-            function tracker(){
-                window.open('https://github.com/cexxo/Tracker');
-            }
-            function gen(){
-                window.open('https://github.com/cexxo/GenerativeArt');
-            }
-            function food(){
-                window.open('https://github.com/eliferin14/Food-leftovers-recognition');
-            }
+        <script src="script.js">
+            
         </script>
     </body>
 </html>
