@@ -184,8 +184,21 @@ function expandToggle(){
     toggle.style.opacity=0.7;
 }
 
-function goTo(from,to){
+function goTo(to){
     const elem = document.getElementById(String(to));
-    from.style.display="none";
-    elem.style.display="flex";
+    const toggle=document.getElementById("toggle");
+    const menu=document.getElementById("menu");
+    const things = ['about','home','skill','projects','contact'];
+    let p;
+    for(var i=0; i<things.length;i++){
+        p = document.getElementById(String(things[i]));
+        if (p.style.display == "flex")
+            p.style.display="none";
+            elem.style.display="flex";
+            menu.style.display="none";
+            toggle.style.height="60px";
+            toggle.style.width="60px";
+            toggle.style.borderRadius="50%";
+            toggle.style.opacity=1;
+    }
 }
