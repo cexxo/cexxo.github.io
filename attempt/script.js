@@ -168,6 +168,9 @@ function myMove3() {
 function tracker(){
     window.open('https://github.com/cexxo/Tracker');
 }
+function gh(){
+    window.open('https://github.com/cexxo');
+}
 function gen(){
     window.open('https://github.com/cexxo/GenerativeArt');
 }
@@ -188,17 +191,19 @@ function goTo(to){
     const elem = document.getElementById(String(to));
     const toggle=document.getElementById("toggle");
     const menu=document.getElementById("menu");
-    const things = ['about','home','skill','projects','contact'];
-    let p;
+    const things = ['home','about','skill','projects','contact'];
     for(var i=0; i<things.length;i++){
-        p = document.getElementById(String(things[i]));
-        if (p.style.display == "flex")
+        var p = document.getElementById(things[i]);
+        if (p.style.display == "flex"){
             p.style.display="none";
-            elem.style.display="flex";
-            menu.style.display="none";
-            toggle.style.height="60px";
-            toggle.style.width="60px";
-            toggle.style.borderRadius="50%";
-            toggle.style.opacity=1;
+            console.log(things[i]);
+            var name2 = 'choice'+things[i];
+        }
     }
+    var name = 'choice'+to;
+    elem.style.display="flex";
+    var button = document.getElementById(name);
+    var oldButton = document.getElementById(name2);
+    button.style.backgroundColor="#427AA1";
+    oldButton.style.backgroundColor="#021427";
 }

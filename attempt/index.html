@@ -7,17 +7,17 @@
         <title>Portfolio</title>
     </head>
     <body>
-        <div class="toggle" id="toggle" onclick="expandToggle()">
+        <div class="toggle" id="toggle">
             <div class="menu" id="menu">
-                <div class="choice" id="choices" onclick="goTo('home')"><p>HOME</p></div>
-                <div class="choice" id="choices" onclick="goTo('about')"><p>ABOUT</p></div>
-                <div class="choice" id="choices" onclick="goTo('skill')"><p>SKILL</p></div>
-                <div class="choice" id="choices" onclick="goTo('projects')"><p>PROJECTS</p></div>
-                <div class="choice" id="choices" onclick="goTo('contact')"><p>CONTACTS</p></div>
+                <div class="choice" id="choicehome" onclick="goTo('home')"><p>HOME</p></div>
+                <div class="choice" id="choiceabout" onclick="goTo('about')"><p>ABOUT</p></div>
+                <div class="choice" id="choiceskill" onclick="goTo('skill')"><p>SKILL</p></div>
+                <div class="choice" id="choicecontact" onclick="goTo('contact')"><p>CONTACTS</p></div>
+                <div class="choice" id="choicegh" onclick="gh()"><p>GITHUB</p></div>
             </div>
         </div>
         <!--Home-->
-        <div class="container" id="home">
+        <div class="container" id="home" style="display: none;">
             <div class= "layout">
                 <h1>Hi, I'm <br>Francesco Crisci<br><p>Student and Developer</p></h1>
                 <div class ="Button">
@@ -192,7 +192,7 @@
             </div>
         </div>
         <!--Contacts-->
-        <div class="container" id="contact" style="display: none;">
+        <div class="container" id="contact" style="display: flex;">
             <div class= "layout">
                 <h1>Interested in me?</p></h1>
                 <div class ="Button">
@@ -208,7 +208,7 @@
                     <p onclick="swapCards('contact','projects')">PROJECTS</p>
                     <p onclick="">CONTACTS</p>
                 </div>
-                <div class="profile" style="background-image: none;">
+                <div class="profile" id="myContact"style="background-image: none;">
                     <p>You can contact me at the following:<br>
                     e-mail: criscifrancesco00@gmail.com<br>
                     phone:+39 3886390629</p>
