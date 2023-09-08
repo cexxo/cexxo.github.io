@@ -1,0 +1,42 @@
+.card{
+    background-color: #B1CC74;
+}
+body{
+    background-color: #E8FCC2;
+}
+a{
+    text-decoration: none;
+    color: #B1CC74;
+    opacity: 0.8;
+}
+a:hover{
+    text-decoration: none;
+    color:#E8FCC2;
+}
+/* Skill section styles */
+#skills {
+    padding: 60px 0;
+}
+
+.skill {
+    margin-bottom: 20px;
+}
+
+.skill h4 {
+    font-size: 18px;
+    margin-bottom: 10px;
+}
+
+/* Progress bar styles */
+.progress {
+    height: 20px;
+    border-radius: 10px;
+}
+
+.progress-bar {
+    height: 20px;
+    line-height: 20px;
+    border-radius: 10px;
+    font-size: 14px;
+    text-align: center;
+}

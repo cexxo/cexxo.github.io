@@ -1,0 +1,261 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Your Portfolio</title>
+
+    <!-- Add Bootstrap CSS (you can link to a CDN or use a local file) -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+
+    <!-- Add your custom CSS styles -->
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <div class="container">
+            <a class="navbar-brand" href="#">Francesco Crisci</a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ml-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="#about">About</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#skills">Skills</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#portfolio">Portfolio</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#contact">Contact</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- About Section -->
+    <section id="about" class="py-5">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-6">
+                    <h2>About Me</h2>
+                    <p>Hi, my name is Francesco and i'm currently studying my master in Computer Engineering
+                        AI & robotics at UniPd. <br>
+                        My interests includes machine learning, deep learning, artificial intelligence,
+                        robotics, small game development. <br>
+                        My hobbies are carving wood, reading, drawing and acting.
+                    </p>
+                </div>
+                <div class="col-lg-6">
+                    <img src="picture2.jpg" alt="Your Image" class="img-fluid rounded-circle">
+                </div>
+                <div class="col-md-6">
+                    <!-- Skill 1 -->
+                    <div class="skill">
+                        <h4>Italian</h4>
+                        <div class="progress">
+                            <div class="progress-bar" style="width: 100%;background-color: #B1CC74;">Native</div>
+                        </div>
+                    </div>
+    
+                    <!-- Skill 2 -->
+                    <div class="skill">
+                        <h4>English</h4>
+                        <div class="progress">
+                            <div class="progress-bar" style="width: 80%;background-color: #B1CC74;">C1</div>
+                        </div>
+                    </div>
+                    <div class="skill">
+                        <h4>Spanish</h4>
+                        <div class="progress">
+                            <div class="progress-bar" style="width: 60%;background-color: #B1CC74;">B1</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+<!-- Skills Section -->
+<section id="skills" class="bg-light py-5">
+    <div class="container">
+        <h2>Skills</h2>
+        <div class="row">
+            <div class="col-md-6">
+                <!-- Skill 1 -->
+                <div class="skill">
+                    <h4>C++</h4>
+                    <div class="progress">
+                        <div class="progress-bar" style="width: 80%;">80%</div>
+                    </div>
+                </div>
+
+                <!-- Skill 2 -->
+                <div class="skill">
+                    <h4>Python</h4>
+                    <div class="progress">
+                        <div class="progress-bar" style="width: 90%;">90%</div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-6">
+                <!-- Skill 3 -->
+                <div class="skill">
+                    <h4>Java</h4>
+                    <div class="progress">
+                        <div class="progress-bar" style="width: 60%;">60%</div>
+                    </div>
+                </div>
+
+                <!-- Skill 4 -->
+                <div class="skill">
+                    <h4>Solidity</h4>
+                    <div class="progress">
+                        <div class="progress-bar" style="width: 70%;">70%</div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-6">
+                <!-- Skill 1 -->
+                <div class="skill">
+                    <h4>Git</h4>
+                    <div class="progress">
+                        <div class="progress-bar" style="width: 75%;">75%</div>
+                    </div>
+                </div>
+
+                <!-- Skill 2 -->
+                <div class="skill">
+                    <h4>OpenCV</h4>
+                    <div class="progress">
+                        <div class="progress-bar" style="width: 80%;">80%</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+
+    <!-- Portfolio Section -->
+    <section id="portfolio" class="py-5">
+        <div class="container" >
+            <h2>Portfolio</h2>
+            <div class="row">
+                <!-- Portfolio items go here -->
+                <div class="col-md-4">
+                    <div class="card mb-4">
+                        <a href="https://github.com/cexxo/GenerativeArt">
+                        <img src="nft.png" class="card-img-top" alt="Project 1">
+                        </a>
+                        <div class="card-body">
+                            <h5 class="card-title">Generative art and automatic mint</h5>
+                            <p class="card-text">In this project i've used python and solidity to develop a smart contract ERC721.
+                                with the combination of python and the framework Brownie i was able to automate the 
+                                process of minting of an arbitrary number of NFT. You can find the project on
+                                my github.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                <!-- Add more portfolio items here -->
+                <div class="col-md-4">
+                    <div class="card mb-4">
+                        <a href="https://github.com/cexxo/Tracker">
+                            <img src="tracker.jpg" class="card-img-top" alt="Project 1">
+                            </a>
+                        <div class="card-body">
+                            <h5 class="card-title">Hand tracker</h5>
+                            <p class="card-text">I've used python and openCV to develop an application that was
+                                able to detect hands in a video flow, locate them and understand if it was open 
+                                or closed.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="card mb-4">
+                        <a href="https://github.com/cexxo/Plankton-preprocessing">
+                            <img src="Plancton.jpg" class="card-img-top" alt="Project 1">
+                            </a>
+                            <div class="card-body">
+                            <h5 class="card-title">Image filtering for deep neural networks</h5>
+                            <p class="card-text">I've developed a some filters for improve the classification
+                                of deep neural networks in the classification of planktons images. I've mixed
+                                the knwoledge of various courses of my master degree.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="card mb-4">
+                        <a href="https://github.com/eliferin14/Food-leftovers-recognition">
+                            <img src="food_image_pruned_keypoints.jpg" class="card-img-top" alt="Project 1">
+                            </a>
+                        <div class="card-body">
+                            <h5 class="card-title">Food segmentation and food leftover estimator</h5>
+                            <p class="card-text">With the collaboration of my colleagues, we developed 
+                                a computer vision system to detect, locate, segment and classify food
+                                from 13 different classes. We then implemented a system which calculates
+                                the ammount of food that has been eaten or wasted.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="card mb-4">
+                        <a href="https://github.com/cexxo/kattisProblems">
+                            <img src="kattis.png" class="card-img-top" alt="Project 1">
+                            </a>
+                        <div class="card-body">
+                            <h5 class="card-title">Competitive programming solutions</h5>
+                            <p class="card-text">Here i'm reporting the solutions of some of the problems
+                                in the platform kattis.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="card mb-4">
+                        <a href="https://github.com/cexxo/University-notes">
+                            <img src="notes.jpg" class="card-img-top" alt="Project 1">
+                        </a>
+                        <div class="card-body">
+                            <h5 class="card-title">Univeristy notes</h5>
+                            <p class="card-text">I've decided to share the notes of some of the courses i've attended
+                                during my bachelor and master degrees in UniPd.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="bg-light py-5">
+        <div class="container">
+            <h2>Contact</h2>
+            <p>You can contact me at the followings:
+                <br>
+                phone: +39 3886390629
+                <br>
+                email: criscifrancesco00@gmail.com
+            </p>
+            <a href="https://www.linkedin.com/in/francesco-crisci-704b33268/">Linkedin</a>
+            <a href="https://github.com/cexxo">Github</a>
+            <a href="https://www.facebook.com/francesco.crisci.96">facebook</a>
+        </div>
+    </section>
+
+    <!-- Add Bootstrap JS and jQuery (make sure to include them before the closing </body> tag) -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.3/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
+</html>
